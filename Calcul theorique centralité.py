@@ -19,9 +19,6 @@ def cal_theo(A):
     L=[]
     for j in range(0,len(A)):
            Q= np.array([[A[l][m] for l in range(0,len(A))] for m in range(0,len(A))])
-           for l in range (0, len(A)):
-               for m in range (0, len(A)):
-                   Q[l][m]=A[l][m]
            for i in range(0, len(A)):
                    Q[i][j]= 0
            M =np.linalg.inv(np.eye(len(A))+np.dot(-1*np.eye(len(A)),Q))
